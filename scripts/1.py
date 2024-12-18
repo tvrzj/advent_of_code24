@@ -4,7 +4,7 @@ with open('data/1.txt', 'r') as f:
     data = [int(word) for line in file for word in line.split()]
     list1 = sorted(data[0::2])
     list2 = sorted(data[1::2])
-
+    
 result = [abs(f - s) for f, s in zip(list1, list2)]
 print(sum(result))
 
@@ -12,5 +12,4 @@ print(sum(result))
 result2 = 0
 for val in list1:
     result2 += val * list2.count(val)
-    
 print(result2)
